@@ -2,6 +2,7 @@ import React from 'react';
 import "@/App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from './contexts/AuthContext';
+import { ThemeProvider } from './contexts/ThemeContext';
 import { Toaster } from './components/ui/sonner';
 
 // Admin Pages
@@ -17,6 +18,9 @@ import AdminAnalytics from './pages/admin/AdminAnalytics';
 import AdminNotifications from './pages/admin/AdminNotifications';
 import AdminCoupons from './pages/admin/AdminCoupons';
 import AdminFinancialReport from './pages/admin/AdminFinancialReport';
+
+// Public Pages
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
