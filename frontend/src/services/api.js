@@ -72,6 +72,12 @@ export const adminAPI = {
   getPayments: (params) => api.get('/admin/payments', { params }),
   getModerationLogs: (params) => api.get('/admin/moderation-logs', { params }),
   getAuditLogs: (params) => api.get('/admin/audit-logs', { params }),
+  // Analytics endpoints
+  getGrowthAnalytics: (months = 6) => api.get(`/admin/analytics/growth?months=${months}`),
+  getRevenueAnalytics: (months = 6) => api.get(`/admin/analytics/revenue?months=${months}`),
+  getConversionAnalytics: () => api.get('/admin/analytics/conversion'),
+  getTopPerformers: (limit = 10) => api.get(`/admin/analytics/top-performers?limit=${limit}`),
+  getRealTimeAnalytics: () => api.get('/admin/analytics/real-time'),
 };
 
 // Users
