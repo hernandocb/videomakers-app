@@ -93,12 +93,27 @@ async def signup(user_data: UserCreate):
     )
 
 @router.post("/login", response_model=TokenResponse)
-async def login(credentials: UserLogin):
-    """Login de usuário"""
+@limiter.limit("5/minute")  # Máximo 5 tentativas por minuto
+async def login(request: Request, credentials: UserLogin):
+    """Login de usuário com rate limiting"""
     
     # Busca usuário
     user_dict = await db.users.find_one({"email": credentials.email}, {"_id": 0})
     if not user_dict:
+        # Log de tentativa falhada
+        await AuditService.log(
+            db=db,
+            user_id="UNKNOWN",
+            user_email=credentials.email,
+            user_role="UNKNOWN",
+            action="login",
+            resource="auth",
+            ip_address=request.client.host if request.client else None,
+            user_agent=request.headers.get("user-agent"),
+            status="failed",
+            error_message="Email não encontrado"
+        )
+        
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Email ou senha incorretos"
@@ -106,6 +121,20 @@ async def login(credentials: UserLogin):
     
     # Verifica senha
     if not verify_password(credentials.password, user_dict["password_hash"]):
+        # Log de tentativa falhada
+        await AuditService.log(
+            db=db,
+            user_id=user_dict["id"],
+            user_email=user_dict["email"],
+            user_role=user_dict["role"],
+            action="login",
+            resource="auth",
+            ip_address=request.client.host if request.client else None,
+            user_agent=request.headers.get("user-agent"),
+            status="failed",
+            error_message="Senha incorreta"
+        )
+        
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Email ou senha incorretos"
@@ -124,10 +153,18 @@ async def login(credentials: UserLogin):
     )
     refresh_token = create_refresh_token(data={"sub": user_dict["id"]})
     
-    # Log de auditoria
-    await db.audit_logs.insert_one({
-        "user_id": user_dict["id"],
-        "action": "login",
+    # Log de login bem-sucedido
+    await AuditService.log(
+        db=db,
+        user_id=user_dict["id"],
+        user_email=user_dict["email"],
+        user_role=user_dict["role"],
+        action="login",
+        resource="auth",
+        ip_address=request.client.host if request.client else None,
+        user_agent=request.headers.get("user-agent"),
+        status="success"
+    )
         "ip": "0.0.0.0",
         "timestamp": datetime.now(timezone.utc).isoformat()
     })
