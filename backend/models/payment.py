@@ -6,6 +6,7 @@ import uuid
 class PaymentCreate(BaseModel):
     job_id: str
     valor_total: float
+    coupon_code: Optional[str] = None  # Código do cupom (se aplicável)
 
 class Payment(BaseModel):
     model_config = ConfigDict(extra="ignore")
