@@ -35,6 +35,8 @@ function App() {
             <Route path="users" element={<AdminUsers />} />
             <Route path="jobs" element={<AdminJobs />} />
             <Route path="payments" element={<AdminPayments />} />
+            <Route path="coupons" element={<AdminCoupons />} />
+            <Route path="financial-report" element={<AdminFinancialReport />} />
             <Route path="notifications" element={<AdminNotifications />} />
             <Route path="config" element={<AdminConfig />} />
             <Route path="moderation" element={<AdminModeration />} />

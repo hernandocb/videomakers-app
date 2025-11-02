@@ -130,3 +130,4 @@ android/app/google-services.json
 ios/Videomakers/GoogleService-Info.plist
 frontend/node_modules/.cache/default-development/3.pack
 frontend/node_modules/.cache/default-development/4.pack
+frontend/node_modules/.cache/default-development/5.pack
