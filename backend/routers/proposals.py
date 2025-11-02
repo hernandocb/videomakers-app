@@ -222,6 +222,22 @@ async def accept_proposal(
     
     await db.chats.insert_one(chat_dict)
     
+    # 🔔 Envia notificação para o videomaker
+    await notify_proposal_accepted(db, proposal_id)
+    
+    # 🔔 Notifica videomakers cujas propostas foram rejeitadas
+    rejected_proposals = await db.proposals.find(
+        {
+            "job_id": proposal["job_id"],
+            "id": {"$ne": proposal_id},
+            "status": "rejected"
+        },
+        {"_id": 0, "id": 1}
+    ).to_list(100)
+    
+    for rej_prop in rejected_proposals:
+        await notify_proposal_rejected(db, rej_prop["id"])
+    
     return {
         "success": True,
         "message": "Proposta aceita com sucesso",
