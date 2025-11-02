@@ -25,9 +25,9 @@ const AdminHeader = () => {
   };
 
   return (
-    <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6">
+    <header className="h-16 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between px-6">
       <div className="flex items-center space-x-4">
-        <h1 className="text-xl font-semibold text-gray-900">Painel Administrativo</h1>
+        <h1 className="text-xl font-semibold text-gray-900 dark:text-white">Painel Administrativo</h1>
       </div>
 
       <div className="flex items-center space-x-4">
