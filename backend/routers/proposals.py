@@ -277,6 +277,9 @@ async def reject_proposal(
         }}
     )
     
+    # 🔔 Envia notificação para o videomaker
+    await notify_proposal_rejected(db, proposal_id)
+    
     return {
         "success": True,
         "message": "Proposta rejeitada"
