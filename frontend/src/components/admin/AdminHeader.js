@@ -11,6 +11,8 @@ import {
 } from '../ui/dropdown-menu';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
+import ThemeToggle from '../ThemeToggle';
+import NotificationCenter from '../NotificationCenter';
 
 const AdminHeader = () => {
   const { user, logout } = useAuth();
