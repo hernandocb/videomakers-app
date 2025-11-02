@@ -15,6 +15,8 @@ import AdminConfig from './pages/admin/AdminConfig';
 import AdminModeration from './pages/admin/AdminModeration';
 import AdminAnalytics from './pages/admin/AdminAnalytics';
 import AdminNotifications from './pages/admin/AdminNotifications';
+import AdminCoupons from './pages/admin/AdminCoupons';
+import AdminFinancialReport from './pages/admin/AdminFinancialReport';
 
 function App() {
   return (
