@@ -14,6 +14,7 @@ import AdminPayments from './pages/admin/AdminPayments';
 import AdminConfig from './pages/admin/AdminConfig';
 import AdminModeration from './pages/admin/AdminModeration';
 import AdminAnalytics from './pages/admin/AdminAnalytics';
+import AdminNotifications from './pages/admin/AdminNotifications';
 
 function App() {
   return (
