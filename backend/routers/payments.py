@@ -4,6 +4,7 @@ from models.payment import PaymentCreate, Payment, PaymentResponse, TransactionL
 from services.payment_service import PaymentService
 from services.value_calculator import ValueCalculator
 from datetime import datetime, timezone
+from services.notification_service import notify_payment_released, notify_job_completed
 
 router = APIRouter(prefix="/payments", tags=["Pagamentos"])
 
