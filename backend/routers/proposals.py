@@ -74,6 +74,9 @@ async def create_proposal(
     
     await db.proposals.insert_one(proposal_dict)
     
+    # 🔔 Envia notificação para o cliente
+    await notify_new_proposal(db, proposal.id)
+    
     return ProposalResponse(
         id=proposal.id,
         job_id=proposal.job_id,
