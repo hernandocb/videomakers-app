@@ -1,15 +1,18 @@
-from fastapi import APIRouter, HTTPException, status, Depends
+from fastapi import APIRouter, HTTPException, status, Depends, Request
 from models.user import UserCreate, User, UserLogin, TokenResponse, UserResponse
 from services.auth_service import hash_password, verify_password, create_access_token, create_refresh_token, decode_token
+from services.security_service import AuditService
 from motor.motor_asyncio import AsyncIOMotorDatabase
 from datetime import datetime, timezone
 from pydantic import BaseModel
+from slowapi import Limiter
+from slowapi.util import get_remote_address
 import os
 
 router = APIRouter(prefix="/auth", tags=["Autenticação"])
 
 # Dependência para obter o banco de dados (será injetado no server.py)
-from server import db
+from server import db, limiter
 
 class GoogleSignInRequest(BaseModel):
     token: str
