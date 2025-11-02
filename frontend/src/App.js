@@ -13,6 +13,7 @@ import AdminJobs from './pages/admin/AdminJobs';
 import AdminPayments from './pages/admin/AdminPayments';
 import AdminConfig from './pages/admin/AdminConfig';
 import AdminModeration from './pages/admin/AdminModeration';
+import AdminAnalytics from './pages/admin/AdminAnalytics';
 
 function App() {
   return (
