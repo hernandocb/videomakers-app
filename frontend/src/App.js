@@ -48,10 +48,9 @@ function App() {
             <Route path="moderation" element={<AdminModeration />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-      
-      <Toaster position="top-right" />
-    </AuthProvider>
+        </BrowserRouter>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
