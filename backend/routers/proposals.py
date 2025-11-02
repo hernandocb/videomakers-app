@@ -3,6 +3,7 @@ from middleware.auth_middleware import get_current_user
 from models.proposal import ProposalCreate, Proposal, ProposalResponse
 from typing import List
 from datetime import datetime, timezone
+from services.notification_service import notify_new_proposal, notify_proposal_accepted, notify_proposal_rejected
 
 router = APIRouter(prefix="/proposals", tags=["Propostas"])
 
