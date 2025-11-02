@@ -57,7 +57,7 @@ async def health_check():
         )
 
 # Import and include routers
-from routers import auth, users, jobs, proposals, payments, ratings, chat, admin, notifications
+from routers import auth, users, jobs, proposals, payments, ratings, chat, admin, notifications, financial
 
 api_router.include_router(auth.router)
 api_router.include_router(users.router)
@@ -68,6 +68,7 @@ api_router.include_router(ratings.router)
 api_router.include_router(chat.router)
 api_router.include_router(admin.router)
 api_router.include_router(notifications.router)
+api_router.include_router(financial.router)
 
 # Include the router in the main app
 app.include_router(api_router)
