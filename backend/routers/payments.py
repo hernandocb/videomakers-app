@@ -203,6 +203,12 @@ async def release_payment(
     
     await db.transaction_logs.insert_one(transaction_dict)
     
+    # 🔔 Envia notificação para o videomaker sobre pagamento liberado
+    await notify_payment_released(db, payment_id)
+    
+    # 🔔 Envia notificação para o cliente sobre job concluído
+    await notify_job_completed(db, payment_dict["job_id"])
+    
     return {
         "success": True,
         "message": "Pagamento liberado para o videomaker",
