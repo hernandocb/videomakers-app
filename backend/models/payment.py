@@ -15,7 +15,10 @@ class Payment(BaseModel):
     job_id: str
     client_id: str
     videomaker_id: str
-    valor_total: float
+    valor_original: Optional[float] = None  # Valor antes do desconto
+    valor_total: float  # Valor final após desconto
+    desconto_aplicado: Optional[float] = None
+    coupon_id: Optional[str] = None
     comissao_plataforma: float
     valor_videomaker: float
     stripe_payment_intent_id: Optional[str] = None
