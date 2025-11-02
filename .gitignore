@@ -128,3 +128,4 @@ frontend/node_modules/.cache/default-development/0.pack
 .env
 android/app/google-services.json
 ios/Videomakers/GoogleService-Info.plist
+frontend/node_modules/.cache/default-development/3.pack
