@@ -165,9 +165,6 @@ async def login(request: Request, credentials: UserLogin):
         user_agent=request.headers.get("user-agent"),
         status="success"
     )
-        "ip": "0.0.0.0",
-        "timestamp": datetime.now(timezone.utc).isoformat()
-    })
     
     user_response = UserResponse(
         id=user_dict["id"],
