@@ -1,0 +1,25 @@
+{
+  "name": "VideomakersMobile",
+  "displayName": "Videomakers",
+  "expo": {
+    "name": "Videomakers",
+    "slug": "videomakers-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0E76FF"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.videomakers.mobile"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0E76FF"
+      },
+      "package": "com.videomakers.mobile"
+    }
+  }
+}

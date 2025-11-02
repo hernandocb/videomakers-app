@@ -1,0 +1,174 @@
+{
+  "info": {
+    "name": "Plataforma de Videomakers API",
+    "description": "Collection completa da API de marketplace de videomakers",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8001/api",
+      "type": "string"
+    },
+    {
+      "key": "access_token",
+      "value": "",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Signup Cliente",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": "{{base_url}}/auth/signup",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"cliente@example.com\",\n  \"password\": \"senha123\",\n  \"nome\": \"João Cliente\",\n  \"telefone\": \"11999999999\",\n  \"role\": \"client\",\n  \"cidade\": \"São Paulo\",\n  \"estado\": \"SP\",\n  \"latitude\": -23.5505,\n  \"longitude\": -46.6333,\n  \"aceite_lgpd\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "Signup Videomaker",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": "{{base_url}}/auth/signup",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"videomaker@example.com\",\n  \"password\": \"senha123\",\n  \"nome\": \"Maria Videomaker\",\n  \"telefone\": \"11988888888\",\n  \"role\": \"videomaker\",\n  \"cidade\": \"São Paulo\",\n  \"estado\": \"SP\",\n  \"latitude\": -23.5489,\n  \"longitude\": -46.6388,\n  \"raio_atuacao_km\": 50.0,\n  \"aceite_lgpd\": true\n}"
+            }
+          }
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [{"key": "Content-Type", "value": "application/json"}],
+            "url": "{{base_url}}/auth/login",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"cliente@example.com\",\n  \"password\": \"senha123\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get Profile",
+          "request": {
+            "method": "GET",
+            "header": [
+              {"key": "Authorization", "value": "Bearer {{access_token}}"}
+            ],
+            "url": "{{base_url}}/users/me"
+          }
+        },
+        {
+          "name": "Search Videomakers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {"key": "Authorization", "value": "Bearer {{access_token}}"}
+            ],
+            "url": {
+              "raw": "{{base_url}}/users/videomakers?latitude=-23.5505&longitude=-46.6333&max_distance_km=50",
+              "query": [
+                {"key": "latitude", "value": "-23.5505"},
+                {"key": "longitude", "value": "-46.6333"},
+                {"key": "max_distance_km", "value": "50"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Jobs",
+      "item": [
+        {
+          "name": "Create Job",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Authorization", "value": "Bearer {{access_token}}"},
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "url": "{{base_url}}/jobs",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"titulo\": \"Gravação de Casamento\",\n  \"descricao\": \"Casamento no sábado\",\n  \"categoria\": \"casamento\",\n  \"data_gravacao\": \"2024-12-15T09:00:00Z\",\n  \"duracao_horas\": 8,\n  \"local\": {\n    \"endereco\": \"Rua das Flores, 123\",\n    \"cidade\": \"São Paulo\",\n    \"estado\": \"SP\",\n    \"latitude\": -23.5505,\n    \"longitude\": -46.6333\n  },\n  \"extras\": [\"drone\", \"edicao_avancada\"]\n}"
+            }
+          }
+        },
+        {
+          "name": "List Jobs",
+          "request": {
+            "method": "GET",
+            "header": [
+              {"key": "Authorization", "value": "Bearer {{access_token}}"}
+            ],
+            "url": "{{base_url}}/jobs"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Proposals",
+      "item": [
+        {
+          "name": "Create Proposal",
+          "request": {
+            "method": "POST",
+            "header": [
+              {"key": "Authorization", "value": "Bearer {{access_token}}"},
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "url": "{{base_url}}/proposals",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"job_id\": \"JOB_ID_HERE\",\n  \"valor_proposto\": 1500.00,\n  \"mensagem\": \"Tenho 5 anos de experiência em casamentos\",\n  \"data_entrega_estimada\": \"2024-12-20T18:00:00Z\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin",
+      "item": [
+        {
+          "name": "Get Platform Stats",
+          "request": {
+            "method": "GET",
+            "header": [
+              {"key": "Authorization", "value": "Bearer {{access_token}}"}
+            ],
+            "url": "{{base_url}}/admin/stats"
+          }
+        },
+        {
+          "name": "Update Platform Config",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {"key": "Authorization", "value": "Bearer {{access_token}}"},
+              {"key": "Content-Type", "value": "application/json"}
+            ],
+            "url": "{{base_url}}/admin/config",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"taxa_comissao\": 0.20,\n  \"valor_hora_base\": 120.0\n}"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

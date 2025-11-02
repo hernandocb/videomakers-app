@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "passed": 17,
+    "total": 17,
+    "success_rate": "100.0%"
+  },
+  "results": [
+    {
+      "test": "Health Check",
+      "success": true,
+      "message": "Backend is healthy and database connected",
+      "details": null,
+      "timestamp": "2025-10-26T23:52:58.023500"
+    },
+    {
+      "test": "Signup Endpoint",
+      "success": true,
+      "message": "User created successfully with correct data",
+      "details": null,
+      "timestamp": "2025-10-26T23:52:58.376441"
+    },
+    {
+      "test": "Login Endpoint",
+      "success": true,
+      "message": "Login successful with correct user data",
+      "details": null,
+      "timestamp": "2025-10-26T23:52:58.937267"
+    },
+    {
+      "test": "Refresh Endpoint",
+      "success": true,
+      "message": "Refresh token worked successfully",
+      "details": null,
+      "timestamp": "2025-10-26T23:52:58.976843"
+    },
+    {
+      "test": "Google Sign-In Endpoint",
+      "success": true,
+      "message": "Endpoint exists and correctly validates Google tokens",
+      "details": null,
+      "timestamp": "2025-10-26T23:52:59.119159"
+    },
+    {
+      "test": "Google Sign-In User Creation",
+      "success": true,
+      "message": "Endpoint validates required fields correctly",
+      "details": null,
+      "timestamp": "2025-10-26T23:52:59.161527"
+    },
+    {
+      "test": "Profile Picture Field",
+      "success": true,
+      "message": "User model accepts profile_picture field",
+      "details": null,
+      "timestamp": "2025-10-26T23:52:59.430319"
+    },
+    {
+      "test": "Users Me Endpoint",
+      "success": true,
+      "message": "User profile retrieved successfully",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:03.483428"
+    },
+    {
+      "test": "Users Update Endpoint",
+      "success": true,
+      "message": "User profile updated successfully",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:03.544044"
+    },
+    {
+      "test": "Jobs Create Endpoint",
+      "success": true,
+      "message": "Job created successfully with ID: 0905e5a6-2dcb-4a9e-81c3-3dbc38050fd3",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:03.971588"
+    },
+    {
+      "test": "Jobs List Endpoint",
+      "success": true,
+      "message": "Jobs list retrieved successfully (1 jobs)",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:04.008528"
+    },
+    {
+      "test": "Jobs Get Endpoint",
+      "success": true,
+      "message": "Job details retrieved successfully",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:04.044027"
+    },
+    {
+      "test": "Proposals Create Endpoint",
+      "success": true,
+      "message": "Proposal created successfully with ID: 60f215f9-5e62-4c31-9e7b-4d8b61ee6521",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:04.397153"
+    },
+    {
+      "test": "Proposals List Endpoint",
+      "success": true,
+      "message": "Proposals list retrieved successfully (1 proposals)",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:04.433799"
+    },
+    {
+      "test": "Payments Hold Endpoint",
+      "success": true,
+      "message": "Endpoint exists and validates job existence",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:04.469895"
+    },
+    {
+      "test": "WebSocket Endpoint",
+      "success": true,
+      "message": "WebSocket endpoint accessible at wss://videoconnect-3.preview.emergentagent.com/api/chat/ws/78d9143f-19be-4695-bdd0-411063526224",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:04.537502"
+    },
+    {
+      "test": "WebSocket Chat Moderation",
+      "success": true,
+      "message": "WebSocket connection and messaging working",
+      "details": null,
+      "timestamp": "2025-10-26T23:53:04.570587"
+    }
+  ],
+  "timestamp": "2025-10-26T23:53:04.572818"
+}

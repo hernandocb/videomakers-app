@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "886877475351",
+    "project_id": "videomakers-platform",
+    "storage_bucket": "videomakers-platform.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886877475351:android:a907de1754532e2de90252",
+        "android_client_info": {
+          "package_name": "video.match"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "886877475351-j91fi94vtft7t4f471vd8no2s28dqedb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6qRp5qu7tqqP3JiVWm6wx9edOLrcPqfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "886877475351-j91fi94vtft7t4f471vd8no2s28dqedb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "886877475351-t4ulfhquml8ha6ouvo8uhgr1evj2cqmo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "video.match"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
