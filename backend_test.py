@@ -14,7 +14,7 @@ import sys
 import os
 
 # Backend URL from frontend .env
-BACKEND_URL = "https://videoconnect-3.preview.emergentagent.com/api"
+BACKEND_URL = "https://videomakers-hub-1.preview.emergentagent.com/api"
 
 class BackendTester:
     def __init__(self):

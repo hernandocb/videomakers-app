@@ -47,7 +47,7 @@ java --version    # Deve ser JDK 17
 O arquivo `.env` já está configurado com as keys de desenvolvimento:
 
 ```env
-API_BASE_URL=https://videoconnect-3.preview.emergentagent.com/api
+API_BASE_URL=https://videomakers-hub-1.preview.emergentagent.com/api
 GOOGLE_MAPS_API_KEY=AIzaSyCBweBXEmEkAR8l_-jpBRoQyeabYx0d0yk
 FCM_SERVER_KEY=BEnfXoF8HRs7W6xx6TehPmTILSki_K9pnnndPWwXCnM
 STRIPE_PUBLISHABLE_KEY=pk_test_51SIvQJRvLMnnPOKk...

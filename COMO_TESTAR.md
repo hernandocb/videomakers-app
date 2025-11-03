@@ -227,7 +227,7 @@ Se você não tem ambiente React Native configurado, pode testar apenas o backen
 
 ```bash
 # Testar cadastro
-curl -X POST https://videoconnect-3.preview.emergentagent.com/api/auth/signup \
+curl -X POST https://videomakers-hub-1.preview.emergentagent.com/api/auth/signup \
   -H "Content-Type: application/json" \
   -d '{
     "email": "teste@example.com",
@@ -238,7 +238,7 @@ curl -X POST https://videoconnect-3.preview.emergentagent.com/api/auth/signup \
   }'
 
 # Testar login
-curl -X POST https://videoconnect-3.preview.emergentagent.com/api/auth/login \
+curl -X POST https://videomakers-hub-1.preview.emergentagent.com/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "teste@example.com",

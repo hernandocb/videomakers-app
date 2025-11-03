@@ -293,7 +293,7 @@ Toda lógica de pagamento é no backend (Stripe Connect).
 **Já Configurado:**
 ```javascript
 // /app/mobile/src/utils/constants.js
-export const API_URL = 'https://videoconnect-3.preview.emergentagent.com/api';
+export const API_URL = 'https://videomakers-hub-1.preview.emergentagent.com/api';
 export const WS_URL = 'wss://videotalent-1.preview.emergentagent.com/api/ws';
 ```
 
@@ -389,7 +389,7 @@ open ios/Videomakers.xcworkspace
 
 **Backend:**
 ```bash
-curl https://videoconnect-3.preview.emergentagent.com/api/health
+curl https://videomakers-hub-1.preview.emergentagent.com/api/health
 # Deve retornar: {"status": "ok"}
 ```
 
@@ -723,7 +723,7 @@ mobile/
 
 ### Antes de Testar
 
-- [ ] Backend rodando (https://videoconnect-3.preview.emergentagent.com/api)
+- [ ] Backend rodando (https://videomakers-hub-1.preview.emergentagent.com/api)
 - [ ] Metro Bundler iniciado (`yarn start`)
 - [ ] Emulador/dispositivo conectado
 - [ ] Permissões concedidas (câmera, localização)

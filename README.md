@@ -95,7 +95,7 @@ A **Plataforma de Videomakers** é um marketplace tipo "Uber para videomakers" q
 
 ### Admin Panel
 
-**URL**: \`https://repo-link-editor.preview.emergentagent.com/admin/login\`
+**URL**: \`https://videomakers-hub-1.preview.emergentagent.com/admin/login\`
 
 \`\`\`
 Email: admin@videomakers.com
@@ -104,7 +104,7 @@ Senha: admin123
 
 ### Landing Page
 
-**URL**: \`https://repo-link-editor.preview.emergentagent.com/\`
+**URL**: \`https://videomakers-hub-1.preview.emergentagent.com/\`
 
 ---
 

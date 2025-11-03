@@ -213,7 +213,7 @@ Ver detalhes completos em: [API_REFERENCE.md](API_REFERENCE.md)
 ## Admin Web - React
 
 ### URL de Acesso
-- **Produção:** https://videoconnect-3.preview.emergentagent.com
+- **Produção:** https://videomakers-hub-1.preview.emergentagent.com
 - **Local:** http://localhost:3000
 
 ### Páginas Implementadas
@@ -427,8 +427,8 @@ Para dúvidas sobre o código:
 3. Testar endpoints via Postman (collection incluída)
 4. Verificar logs do backend
 
-**Backend URL:** https://videoconnect-3.preview.emergentagent.com/api
-**Admin Web:** https://videoconnect-3.preview.emergentagent.com
+**Backend URL:** https://videomakers-hub-1.preview.emergentagent.com/api
+**Admin Web:** https://videomakers-hub-1.preview.emergentagent.com
 
 ---
 

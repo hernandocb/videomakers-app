@@ -566,8 +566,8 @@ A **Plataforma de Videomakers** é um marketplace completo tipo "Uber para video
 ### Base URL
 
 ```
-Backend: https://repo-link-editor.preview.emergentagent.com/api
-Frontend: https://repo-link-editor.preview.emergentagent.com
+Backend: https://videomakers-hub-1.preview.emergentagent.com/api
+Frontend: https://videomakers-hub-1.preview.emergentagent.com
 ```
 
 ### Autenticação
@@ -646,7 +646,7 @@ Authorization: Bearer <token>
 
 ### Admin Panel
 
-**URL**: `https://repo-link-editor.preview.emergentagent.com/admin/login`
+**URL**: `https://videomakers-hub-1.preview.emergentagent.com/admin/login`
 
 **Credenciais**:
 - Email: `admin@videomakers.com`

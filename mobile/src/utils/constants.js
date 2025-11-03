@@ -45,7 +45,7 @@ export const FONTS = {
 };
 
 // Backend API URL
-export const API_URL = 'https://videoconnect-3.preview.emergentagent.com/api';
+export const API_URL = 'https://videomakers-hub-1.preview.emergentagent.com/api';
 
 // Google Maps API Key
 export const GOOGLE_MAPS_API_KEY = 'AIzaSyCBweBXEmEkAR8l_-jpBRoQyeabYx0d0yk';

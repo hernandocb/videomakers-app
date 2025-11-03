@@ -16,7 +16,7 @@
 ### Base URL
 
 ```
-Produção: https://videoconnect-3.preview.emergentagent.com/api
+Produção: https://videomakers-hub-1.preview.emergentagent.com/api
 Local: http://localhost:8001/api
 ```
 
@@ -937,7 +937,7 @@ POST /api/admin/users/{user_id}/ban
 
 ```bash
 # 1. Login
-curl -X POST https://videoconnect-3.preview.emergentagent.com/api/auth/login \
+curl -X POST https://videomakers-hub-1.preview.emergentagent.com/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "cliente@example.com",
@@ -947,7 +947,7 @@ curl -X POST https://videoconnect-3.preview.emergentagent.com/api/auth/login \
 # Response: { "access_token": "...", ... }
 
 # 2. Criar Job
-curl -X POST https://videoconnect-3.preview.emergentagent.com/api/jobs/ \
+curl -X POST https://videomakers-hub-1.preview.emergentagent.com/api/jobs/ \
   -H "Authorization: Bearer <access_token>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -971,11 +971,11 @@ curl -X POST https://videoconnect-3.preview.emergentagent.com/api/jobs/ \
 
 ```bash
 # 1. Buscar jobs disponíveis
-curl -X GET "https://videoconnect-3.preview.emergentagent.com/api/jobs/?status=open" \
+curl -X GET "https://videomakers-hub-1.preview.emergentagent.com/api/jobs/?status=open" \
   -H "Authorization: Bearer <videomaker_token>"
 
 # 2. Enviar proposta
-curl -X POST https://videoconnect-3.preview.emergentagent.com/api/proposals/ \
+curl -X POST https://videomakers-hub-1.preview.emergentagent.com/api/proposals/ \
   -H "Authorization: Bearer <videomaker_token>" \
   -H "Content-Type: application/json" \
   -d '{
@@ -990,15 +990,15 @@ curl -X POST https://videoconnect-3.preview.emergentagent.com/api/proposals/ \
 
 ```bash
 # 1. Ver propostas
-curl -X GET "https://videoconnect-3.preview.emergentagent.com/api/proposals/job/job-uuid-123" \
+curl -X GET "https://videomakers-hub-1.preview.emergentagent.com/api/proposals/job/job-uuid-123" \
   -H "Authorization: Bearer <client_token>"
 
 # 2. Aceitar proposta
-curl -X POST "https://videoconnect-3.preview.emergentagent.com/api/proposals/proposal-uuid-456/accept" \
+curl -X POST "https://videomakers-hub-1.preview.emergentagent.com/api/proposals/proposal-uuid-456/accept" \
   -H "Authorization: Bearer <client_token>"
 
 # 3. Pagar (hold)
-curl -X POST https://videoconnect-3.preview.emergentagent.com/api/payments/hold \
+curl -X POST https://videomakers-hub-1.preview.emergentagent.com/api/payments/hold \
   -H "Authorization: Bearer <client_token>" \
   -H "Content-Type: application/json" \
   -d '{
